@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 800px;
+    padding: 20px;
+    border-radius: 6px;
+    background: radial-gradient(ellipse at center, #4a90e2 0%,#1967c3 100%);
+    box-shadow: 4px 4px 19px 5px rgba(34, 60, 80, 0.2);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-col {
+    width: 40%;
+    margin-right: 40px;
+}
+
+.right-col {
+    width: calc(100% - 40px - 40%);
+    text-align: right;
+}
+
+.form-group {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 28px 25px 8px 25px;
+    border-radius: 4px;
+    height: 60px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    transition: all .3s ease;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.form-control:focus ~ .placeholder {
+    top: 10px;
+    font-size: 12px;
+}
+
+.form-control.error {
+    border-color: #D8000C;
+    color: #D8000C;
+    background: #FFBABA;
+}
+
+.form-control.error ~ .placeholder {
+    color: #D8000C;
+}
+
+.placeholder {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    color: #fff;
+    font-weight: 700;
+    opacity: .7;
+    transition: all .3s ease;
+}
+
+.placeholder.focused {
+    top: 10px;
+    font-size: 12px;
+}
+
+textarea.form-control {
+    min-height: calc(60px + 40px + 60px);
+}
+
+.submit {
+    display: inline-flex;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer; 
+    padding: 0 20px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.submit:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.submit.disabled {
+    opacity: .4;
+}
+
+.submit.disabled:hover {
+    background: transparent;
+    cursor: not-allowed;
+}
+
+
+.form-title {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.error-message {
+    position: absolute;
+    color: #D8000C;
+    font-size: 12px;
+    top: calc(100% + 5px);
+    left: 0;
+}
+
+@media screen and (max-width: 769px){
+    .form-container {
+        width: 95%;
+    }
+
+    .right-col {
+        width: 100%;
+    }
+
+    .left-col {
+        width: 100%;
+        margin: 0;
+    }
+}

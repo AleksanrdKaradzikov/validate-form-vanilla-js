@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1 class="form-title">Форма обратной связи</h1>
+        <form action="#" class="form">
+            <div class="row">
+                <div class="left-col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name">
+                        <span class="placeholder">Ваше имя</span>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email">
+                        <span class="placeholder">Ваша почта</span>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="right-col">
+                    <div class="form-group">
+                        <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                        <span class="placeholder">Сообщение</span>
+                        <span class="error-message"></span>
+                    </div>
+                    <button class="submit">
+                        отправить
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
