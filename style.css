@@ -37,6 +37,10 @@ body {
     text-align: right;
 }
 
+.submit-wrap {
+    position: relative;
+}
+
 .form-group {
     width: 100%;
     position: relative;
@@ -99,6 +103,7 @@ body {
 
 textarea.form-control {
     min-height: calc(60px + 40px + 60px);
+    resize: vertical;
 }
 
 .submit {
@@ -144,6 +149,23 @@ textarea.form-control {
     font-size: 12px;
     top: calc(100% + 5px);
     left: 0;
+}
+
+.success-message {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    font-size: 15px;
+    color: rgb(4, 212, 4);
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: 700;
+}
+
+.success-message.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 @media screen and (max-width: 769px){

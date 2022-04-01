@@ -1,6 +1,7 @@
 const controls = document.querySelectorAll('.form-control');
 const submit = document.querySelector('.submit');
 const form = document.querySelector('.form');
+const successMessage = document.querySelector('.success-message');
 
 const state = {};
 
@@ -42,6 +43,7 @@ function hadleSubmit() {
             }
         })
 
+
         submit.disabled = true;
         submit.textContent = 'отправка...';
         submit.classList.add('disabled');
@@ -49,6 +51,8 @@ function hadleSubmit() {
         setTimeout(() => {
             form.reset();
             alert(JSON.stringify(data), null, 2);
+
+            showSuccessMessage();
 
             submit.disabled = false;
             submit.classList.remove('disabled');
@@ -122,4 +126,13 @@ function observeState() {
 
 function checkErros() {
     return Object.keys(state).some((key) => state[key].blur && state[key].error);
+}
+
+
+function showSuccessMessage() {
+    successMessage.classList.add('show');
+
+    setTimeout(() => {
+        successMessage.classList.remove('show');
+    }, 1500);
 }
